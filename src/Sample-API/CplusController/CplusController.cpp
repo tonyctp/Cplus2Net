@@ -23,7 +23,7 @@ int main()
 		(LPVOID*)&pMetaHostPolicy);
 	hr = CLRCreateInstance(CLSID_CLRDebugging, IID_ICLRDebugging,
 		(LPVOID*)&pCLRDebugging);
-
+	
 	ICLRRuntimeInfo* pRuntimeInfo = NULL;
 	hr = pMetaHost->GetRuntime(FRAMWORK_VERSION, IID_ICLRRuntimeInfo, (LPVOID*)&pRuntimeInfo);
 	ICLRRuntimeHost* pRuntimeHost = NULL;
