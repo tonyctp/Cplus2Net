@@ -10,10 +10,13 @@
 
 int main()
 {
+
 	using namespace std;
+	cin.get();
 	HRESULT init = CoInitialize(NULL);
 	if (init != S_OK)
 		return -1;
+
 	NetLibraryCom::ITestPtr test;
 	HRESULT hr = test.CreateInstance(__uuidof(NetLibraryCom::Test));
 	if (hr != S_OK)
